@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BBT Manager Plugin
 // @namespace    http://burtbrothers.com/
-// @version      0.1.2
+// @version      0.1.3
 // @description  None
 // @author       BBT IT
 // @match        *://*.replicon.com/StratusHR132/schedulemanagement/*
