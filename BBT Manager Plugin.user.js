@@ -204,11 +204,14 @@ function fillTotals() {
     var sum6 = day6.reduce(function(a, b){
         return a + b;
     }, 0);
-    let weekTotal = sum1 + sum2 + sum3 + sum4 + sum5 + sum6
+    let weekTotal = sum0 + sum1 + sum2 + sum3 + sum4 + sum5 + sum6
 
     //Updates footer with total for each day
     if (sum0 == 0) {
     $("table.dataGrid.listPageGrid.scheduleGrid tfoot tr:eq(1) td:eq(0) div").append("<span>" + formatter.format(weekTotal) + "</span>")
+    } else {
+         $('td[useruri="urn:replicon:user:no-user"]:eq(0)').append("<span>Total for week: " + formatter.format(weekTotal) + "</span>")
+        $("table.dataGrid.listPageGrid.scheduleGrid tfoot tr:eq(1) td:eq(0) div").append("<span>" + formatter.format(sum0) + "</span>")
     }
     $("table.dataGrid.listPageGrid.scheduleGrid tfoot tr:eq(1) td:eq(1) div").append("<span>" + formatter.format(sum1) + "</span>")
     $("table.dataGrid.listPageGrid.scheduleGrid tfoot tr:eq(1) td:eq(2) div").append("<span>" + formatter.format(sum2) + "</span>")
